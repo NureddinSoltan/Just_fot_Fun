@@ -2,6 +2,8 @@
 algorithms_done.ipynb
 algorithms_doneV2.ipynb
 algorithms_done.py
+algorithms_done_V3.ipynb
+Parse_Whatsapp_Chat/algorithms_done_V3.ipynb
 
 # Django
 *.log
@@ -80,4 +82,5 @@ staticfiles/
 .vscode
 
 # config files
+
 *email_config.py
