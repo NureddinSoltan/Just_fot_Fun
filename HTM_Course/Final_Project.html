@@ -1,0 +1,324 @@
+<!--
+Final Project: "My Interactive Portfolio" - HTML-only assignment
+Students must build a single-page portfolio that demonstrates each HTML topic covered in the course.
+Requirements:
+- Use only HTML (no CSS or JavaScript). Inline styles allowed only for accessibility (e.g., high-contrast fallback) — prefer semantic HTML.
+- The page should be organized with timestamps sections mapping to course lessons.
+- Include examples for every listed topic: headings, paragraphs, lists, tables, images, links, forms (all input types), audio, video, iframes, accessibility attributes, ARIA roles, semantic elements, entities, comments, doctype, and more.
+- The page must be fully self-contained so it can be opened locally.
+- Provide sample content and placeholder media links that students will replace.
+- Include instructions/comments in the HTML so students know what to implement/replace.
+- Use examples of forms demonstrating method/action/name, file input, datalist, novalidate, target, hidden, reset, range, number, color, radio, checkbox, textarea, select, etc.
+
+Below is a complete HTML document scaffold students can download and modify. It intentionally uses many HTML features (including deprecated ones for teaching reasons) and demonstrates best practices for accessibility.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Portfolio — HTML Final Project</title>
+  <!--
+    Instructions for students:
+    - Replace placeholder text and media with your own content.
+    - Keep the structure and the required elements to show understanding.
+    - Do NOT add external CSS or JS. This assignment is about semantic HTML only.
+  -->
+</head>
+<body>
+  <!-- 00:00 Introduction And What You Need To Learn -->
+  <header>
+    <h1>My Interactive Portfolio</h1>
+    <p>By: &lt;Your Name&gt; — A final HTML project demonstrating course topics.</p>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#elements">Elements</a></li>
+        <li><a href="#first-page">First Page</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#forms">Forms</a></li>
+        <li><a href="#accessibility">Accessibility</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 01: First Project And First Page -->
+  <main>
+    <section id="intro">
+      <h2>Introduction</h2>
+      <p>This page is a single-file portfolio that shows examples of many HTML elements taught in the course. Follow the comments inside the file to customize.</p>
+      <!-- Example of a comment -- this will not appear in the page. -->
+    </section>
+
+    <section id="elements">
+      <h2>Elements & Browser</h2>
+      <p>Below are examples of headings, paragraphs, and formatting elements.</p>
+
+      <!-- Headings (07) -->
+      <h1>Heading Level 1</h1>
+      <h2>Heading Level 2</h2>
+      <h3>Heading Level 3</h3>
+      <h4>Heading Level 4</h4>
+      <h5>Heading Level 5</h5>
+      <h6>Heading Level 6</h6>
+
+      <!-- Paragraphs (09) and Formatting (11) -->
+      <p>This is a paragraph with <strong>strong</strong>, <em>emphasis</em>, <small>small text</small>, <mark>highlight</mark>, and <del>deleted</del> text.</p>
+
+      <!-- Line break (16) and span example -->
+      <p>Line one.<br />Line two with a <span>span element</span> inside the paragraph.</p>
+
+      <!-- Entities (18) -->
+      <p>HTML entities: &amp; &lt; &gt; &quot; &copy; &euro; &hearts;</p>
+
+      <!-- Doctype (06) is already shown at top; Quirks mode note: Add a comment -->
+      <!-- Note: <!DOCTYPE html> prevents quirks mode in modern browsers -->
+    </section>
+
+    <!-- Head and nested elements (04) -->
+    <section id="head-nested">
+      <h2>Head and Nested Elements</h2>
+      <p>Meta tags and head content live above the visible page inside <code>&lt;head&gt;</code>.</p>
+      <p>Example nested lists:</p>
+      <ul>
+        <li>Item 1
+          <ol>
+            <li>Subitem 1</li>
+            <li>Subitem 2</li>
+          </ol>
+        </li>
+        <li>Item 2</li>
+      </ul>
+    </section>
+
+    <!-- Lists (14) -->
+    <section id="lists">
+      <h2>Lists</h2>
+      <h3>Unordered List</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+
+      <h3>Ordered List</h3>
+      <ol>
+        <li>Start</li>
+        <li>Build</li>
+        <li>Test</li>
+      </ol>
+
+      <h3>Description List</h3>
+      <dl>
+        <dt>HTML</dt>
+        <dd>Markup language for web pages.</dd>
+        <dt>CSS</dt>
+        <dd>Styles for presentation.</dd>
+      </dl>
+    </section>
+
+    <!-- Table (15) -->
+    <section id="table">
+      <h2>Table Example</h2>
+      <table border="1">
+        <caption>Sample Table</caption>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Supported</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Audio</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Video</td>
+            <td>Yes</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">End of table</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <!-- Media: Audio & Video (22,23) -->
+    <section id="media">
+      <h2>Media</h2>
+      <h3>Audio</h3>
+      <p>Provide a local or remote audio file. Replace the source with your file.</p>
+      <audio controls>
+        <source src="audio-sample.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <h3>Video</h3>
+      <p>Provide a local or remote video file. Replace the source with your file.</p>
+      <video controls width="480">
+        <source src="video-sample.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- iframe, pre and code (34) -->
+      <h3>Embed an external page</h3>
+      <iframe src="https://example.com" title="Example site" width="600" height="200"></iframe>
+
+      <h3>Preformatted + Code</h3>
+      <pre><code>&lt;!-- This is sample code block --&gt;
+&lt;h1&gt;Hello&lt;/h1&gt;</code></pre>
+    </section>
+
+    <!-- Forms (24-33) -->
+    <section id="forms">
+      <h2>Forms</h2>
+      <form action="/submit" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <!-- Input types (24-27,31) -->
+          <label for="name">Name:</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required>
+
+          <label for="email">Email:</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com">
+
+          <label for="birthdate">Birthdate:</label>
+          <input id="birthdate" name="birthdate" type="date">
+
+          <label for="color">Favorite Color:</label>
+          <input id="color" name="color" type="color" value="#ff0000">
+
+          <label for="range">Satisfaction (0-10):</label>
+          <input id="range" name="range" type="range" min="0" max="10" value="5">
+
+          <label for="number">Lucky Number:</label>
+          <input id="number" name="number" type="number" min="0" max="100">
+
+          <label>Gender:</label>
+          <input id="male" name="gender" type="radio" value="male"><label for="male">Male</label>
+          <input id="female" name="gender" type="radio" value="female"><label for="female">Female</label>
+
+          <label for="subscribe">Subscribe to newsletter:</label>
+          <input id="subscribe" name="subscribe" type="checkbox" value="yes">
+
+          <label for="country">Country (select):</label>
+          <select id="country" name="country">
+            <option value="">Choose...</option>
+            <option value="us">United States</option>
+            <option value="ca">Canada</option>
+            <option value="uk">United Kingdom</option>
+          </select>
+
+          <label for="bio">Short Bio:</label>
+          <textarea id="bio" name="bio" rows="4" cols="40" placeholder="Tell us about yourself"></textarea>
+
+          <!-- File input, search, url, time (31) -->
+          <label for="avatar">Upload avatar:</label>
+          <input id="avatar" name="avatar" type="file" accept="image/*">
+
+          <label for="website">Website:</label>
+          <input id="website" name="website" type="url" placeholder="https://">
+
+          <label for="appt">Preferred time:</label>
+          <input id="appt" name="appt" type="time">
+
+          <!-- Datalist (33) -->
+          <label for="favlang">Favorite language:</label>
+          <input list="langs" id="favlang" name="favlang">
+          <datalist id="langs">
+            <option value="HTML">
+            <option value="CSS">
+            <option value="JavaScript">
+          </datalist>
+
+          <!-- Hidden, reset, button (27,33) -->
+          <input type="hidden" name="form_id" value="portfolio_001">
+          <input type="reset" value="Reset Form">
+          <input type="submit" value="Submit">
+        </fieldset>
+      </form>
+
+      <!-- novalidate, target can be shown in another form example -->
+      <form action="https://example.com/search" method="get" target="_blank" novalidate>
+        <label for="q">Search (no validation, opens new tab):</label>
+        <input id="q" name="q" type="search">
+        <button type="submit">Go</button>
+      </form>
+
+      <!-- Buttons, bdi, bdo, wbr, q, blockquote examples (33) -->
+      <section>
+        <h3>Misc Inline Elements</h3>
+        <p>Quotation: <q cite="#">This is a short inline quote</q></p>
+        <blockquote cite="https://example.com">
+          A longer blockquote example pulled from a pretend source.
+        </blockquote>
+        <p>Word with wbr: antidisestab<wbr>lishmentarianism</p>
+        <p>BDI example: <bdi>Right-to-left text</bdi></p>
+        <button type="button">A plain button</button>
+      </section>
+
+    </section>
+
+    <!-- Semantic elements & layout (19-21) -->
+    <section id="semantic">
+      <h2>Semantic Elements & Layout</h2>
+      <article>
+        <h3>Article Title</h3>
+        <p>This is an <code>&lt;article&gt;</code> element example.</p>
+      </article>
+
+      <aside>
+        <h4>Aside</h4>
+        <p>Supplementary information about the portfolio.</p>
+      </aside>
+
+      <section>
+        <h3>Header, Nav, Footer Example</h3>
+        <header>
+          <h4>Section header</h4>
+        </header>
+        <nav>
+          <ul>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </nav>
+        <footer>
+          <p>Section footer</p>
+        </footer>
+      </section>
+    </section>
+
+    <!-- Accessibility (35,36) -->
+    <section id="accessibility">
+      <h2>Accessibility</h2>
+      <p>Use semantic elements, labels, alt text, and ARIA attributes.</p>
+      <img src="avatar.png" alt="Student avatar placeholder" width="120">
+      <p>Example ARIA landmarks:</p>
+      <div role="region" aria-labelledby="aria-title">
+        <h3 id="aria-title">Important Region</h3>
+        <p>This region has a role and a label for assistive tech.</p>
+      </div>
+    </section>
+
+    <!-- Contact with mailto link (12) and other anchor uses -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email me: <a href="mailto:student@example.com">student@example.com</a></p>
+      <p>Call me: <a href="tel:+1234567890">+1 234 567 890</a></p>
+      <p>External link: <a href="https://example.com" target="_blank" rel="noopener noreferrer">Open example.com</a></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© <span id="year">2025</span> Portfolio project — built with semantic HTML.</p>
+  </footer>
+
+</body>
+</html>
